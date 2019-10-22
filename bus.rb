@@ -7,6 +7,10 @@ class Bus
     @destination = destination
   end
 
+  def drive()
+    return "All Aboard!"
+  end
+
 
 
 end

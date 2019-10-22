@@ -16,6 +16,10 @@ class BusTest < MiniTest::Test
     assert_equal("North Berwick", @bus.destination)
   end
 
+  def test_drive
+    assert_equal("All Aboard!", @bus.drive)
+  end
+
 
 
 
