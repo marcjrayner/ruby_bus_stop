@@ -20,6 +20,10 @@ class BusTest < MiniTest::Test
     assert_equal("All Aboard!", @bus.drive)
   end
 
+  def test_passengers_starts_empty
+    assert_equal(0, @bus.passengers.length)
+  end
+
 
 
 
