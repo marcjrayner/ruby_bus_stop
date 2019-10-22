@@ -12,6 +12,18 @@ class Bus
     return "All Aboard!"
   end
 
+  def passenger_starts_empty
+    return @passengers.length
+  end
+
+  def passenger_count()
+    @passengers.count()
+  end
+
+  def pick_up(passenger)
+    @passengers << passenger
+  end
+
 
 
 

@@ -15,8 +15,4 @@ def test_get_age
 end
 
 
-
-
-
-
 end
