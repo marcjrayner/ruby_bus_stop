@@ -12,7 +12,7 @@ class Bus
     return "All Aboard!"
   end
 
-  def passenger_starts_empty
+  def passenger_starts_empty()
     return @passengers.length
   end
 
@@ -28,7 +28,7 @@ class Bus
     @passengers.delete(passenger)
   end
 
-  def empty
+  def empty()
     @passengers.clear
   end
 
