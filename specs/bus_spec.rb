@@ -2,6 +2,7 @@ require('minitest/autorun')
 require('minitest/rg')
 require_relative('../bus')
 require_relative('../person')
+require_relative('../bus_stop')
 
 class BusTest < MiniTest::Test
 
@@ -10,6 +11,7 @@ class BusTest < MiniTest::Test
     @passenger1 = Person.new("Steven Gerrard", 38)
     @passenger2 = Person.new("Ryan Giggs", 42)
     @passenger3 = Person.new("Paul Pogba", 24)
+    @stop = BusStop.new("Waverley")
   end
 
   def test_get_route_number()
@@ -53,11 +55,14 @@ class BusTest < MiniTest::Test
     assert_equal(0, @bus.passenger_count())
   end
 
-
-
-
-
-
+  def test_pick_up_from_stop()
+    @stop.add_person_to_queue(@passenger1)
+    @stop.add_person_to_queue(@passenger2)
+    @stop.add_person_to_queue(@passenger3)
+    @bus.pick_up_from_stop(@stop_A)
+    assert_equal(3, @bus.passenger_count())
+    assert_equal(0, @stop.queue.length())
+  end
 
 
 end
