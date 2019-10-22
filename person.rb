@@ -7,6 +7,6 @@ attr_reader :name, :age
     @age = age
   end
 
-  
+
 
 end
