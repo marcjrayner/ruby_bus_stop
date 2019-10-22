@@ -45,6 +45,15 @@ class BusTest < MiniTest::Test
     assert_equal(false, @bus.passengers.include?(@passenger3))
   end
 
+  def test_empty
+    @bus.pick_up(@passenger1)
+    @bus.pick_up(@passenger2)
+    @bus.pick_up(@passenger3)
+    @bus.empty 
+    assert_equal(0, @bus.passenger_count)
+  end
+
+
 
 
 
